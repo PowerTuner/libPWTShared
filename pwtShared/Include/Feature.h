@@ -1,0 +1,123 @@
+/*
+ * This file is part of PWTShared.
+ * Copyright (C) 2025 kylon
+ *
+ * PWTShared is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * PWTShared is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+#pragma once
+
+namespace PWTS {
+    enum struct Feature: int {
+		// linux
+        SYSFS_GROUP,
+        CPU_PARK_SYSFS,
+    	CPU_SMT_SYSFS,
+        CPUFREQ_SYSFS,
+    	CPUIDLE_GOV_SYSFS,
+
+    	INTEL_GPU_SYSFS_GROUP,
+		INTEL_GPU_RPS_FREQ_SYSFS,
+		INTEL_GPU_BOOST_SYSFS,
+
+		AMD_GPU_SYSFS_GROUP,
+		AMD_GPU_DPM_FORCE_PERF_LEVEL_SYSFS,
+		AMD_GPU_POWER_DPM_STATE_SYSFS,
+
+		// windows
+		PWR_SCHEME_GROUP,
+
+    	// intel
+        INTEL_CPU_GROUP,
+    	INTEL_PLATFORM_INFO,
+    	INTEL_PLATFORM_INFO_NHLM,
+    	INTEL_PLATFORM_INFO_IVB,
+        INTEL_PKG_POWER_LIMIT,
+        INTEL_VR_CURRENT_CFG,
+        INTEL_PP1_CURRENT_CFG,
+        INTEL_TURBO_POWER_CURRENT_LIMIT,
+        INTEL_TURBO_POWER_CURRENT_LIMIT_RW,
+        INTEL_CPU_POWER_BALANCE,
+        INTEL_GPU_POWER_BALANCE,
+        INTEL_ENERGY_PERF_BIAS,
+        INTEL_TURBO_RATIO_LIMIT,
+        INTEL_TURBO_RATIO_LIMIT_RW,
+        INTEL_IA32_MISC_ENABLE_GROUP,
+        INTEL_ENHANCED_SPEEDSTEP,
+        INTEL_TURBO_BOOST,
+        INTEL_POWER_CTL,
+        INTEL_POWER_CTL_NHLM,
+        INTEL_POWER_CTL_SB,
+        INTEL_POWER_CTL_CU1,
+        INTEL_MISC_PWR_MGMT,
+        INTEL_MISC_PWR_MGMT_NHLM,
+        INTEL_HWP_GROUP,
+        INTEL_HWP_REQ_PKG,
+        INTEL_HWP_EPP,
+        INTEL_HWP_ACT_WIND,
+        INTEL_HWP_VALID_BITS,
+        INTEL_HWP_CTL,
+        INTEL_UNDERVOLT_GROUP,
+        INTEL_UNDERVOLT_CPU,
+        INTEL_UNDERVOLT_GPU,
+        INTEL_UNDERVOLT_CACHE,
+        INTEL_UNDERVOLT_UNSLICE,
+        INTEL_UNDERVOLT_SYSAGENT,
+    	INTEL_PKG_CST_CONFIG_CONTROL,
+    	INTEL_PKG_CST_CONFIG_CONTROL_SB,
+    	INTEL_PKG_CST_CONFIG_CONTROL_CU1,
+    	INTEL_TEMPERATURE_TARGET,
+
+    	INTEL_CPU_STAT_GROUP,
+		INTEL_PKG_THERM_STATUS,
+
+    	INTEL_MCHBAR_GROUP,
+    	INTEL_MCHBAR_PKG_RAPL_LIMIT,
+		INTEL_MCHBAR_PKG_RAPL_LIMIT_IVB,
+		INTEL_MCHBAR_PKG_RAPL_LIMIT_TGL,
+
+    	// linux amd
+    	AMD_PSTATE_SYSFS,
+
+    	// amd
+        AMD_CPU_RY_GROUP,
+        AMD_RY_STAPM_LIMIT,
+        AMD_RY_FAST_LIMIT,
+        AMD_RY_SLOW_LIMIT,
+        AMD_RY_TCTL_TEMP,
+        AMD_RY_APU_SLOW,
+        AMD_RY_APU_SKIN_TEMP,
+        AMD_RY_DGPU_SKIN_TEMP,
+        AMD_RY_VRM_CURRENT,
+        AMD_RY_VRM_SOC_CURRENT,
+        AMD_RY_VRM_MAX_CURRENT,
+        AMD_RY_VRM_SOC_MAX_CURRENT,
+        AMD_RY_STATIC_GFX_CLK,
+    	AMD_RY_MIN_GFX_CLOCK,
+    	AMD_RY_MAX_GFX_CLOCK,
+        AMD_RY_POWER_PROFILE,
+    	AMD_RY_CO_ALL,
+    	AMD_RY_CO_PER,
+
+    	AMD_CPU_RY_STAT_GROUP,
+        AMD_RY_TCTL_TEMP_VAL,
+
+        AMD_CPU_GROUP,
+        AMD_HWPSTATE,
+        AMD_CORE_PERFORMANCE_BOOST,
+        AMD_CPPC,
+
+    	// FAN
+    	FAN_CURVE
+    };
+}
