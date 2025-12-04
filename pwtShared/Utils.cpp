@@ -23,11 +23,11 @@
 #include "../version.h"
 
 namespace PWTS {
-    constexpr int getLibMajorVersion() {
+    int getLibMajorVersion() {
         return LIB_VER_MAJOR;
     }
 
-    constexpr int getLibMinorVersion() {
+    int getLibMinorVersion() {
         return LIB_VER_MINOR;
     }
 

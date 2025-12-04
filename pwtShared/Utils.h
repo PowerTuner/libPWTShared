@@ -25,8 +25,8 @@
 #include "Include/Packets/DeviceInfoPacket.h"
 
 namespace PWTS {
-    [[nodiscard]] PWTSHARED_EXPORT constexpr int getLibMajorVersion();
-    [[nodiscard]] PWTSHARED_EXPORT constexpr int getLibMinorVersion();
+    [[nodiscard]] PWTSHARED_EXPORT int getLibMajorVersion();
+    [[nodiscard]] PWTSHARED_EXPORT int getLibMinorVersion();
     [[nodiscard]] PWTSHARED_EXPORT bool isValidPort(quint16 port);
     [[nodiscard]] PWTSHARED_EXPORT QByteArray loadFile(const QString &path);
     [[nodiscard]] PWTSHARED_EXPORT bool writeFile(const QString &path, const QByteArray &data);

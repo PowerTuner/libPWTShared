@@ -111,7 +111,12 @@ add_library("PWT::Shared" ALIAS ${PROJECT_NAME})
 
 target_link_libraries(${PROJECT_NAME} PRIVATE Qt::Core Qt::Network)
 target_include_directories(${PROJECT_NAME} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
-target_compile_definitions(${PROJECT_NAME} PUBLIC PWTSHARED_LIBRARY) #todo should be private?
+
+if (WIN32)
+	target_compile_definitions(${PROJECT_NAME} PUBLIC PWTSHARED_LIBRARY)
+else ()
+	target_compile_definitions(${PROJECT_NAME} PRIVATE PWTSHARED_LIBRARY)
+endif ()
 
 include(CheckIPOSupported)
 check_ipo_supported(RESULT has_ipo OUTPUT ipo_error)
