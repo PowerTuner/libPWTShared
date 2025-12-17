@@ -26,32 +26,36 @@ namespace PWTS {
     class PWTSHARED_EXPORT [[nodiscard]] RWData final {
     private:
         bool valid = false;
+        bool ignored = false;
         T value;
 
     public:
         RWData() = default;
 
-        explicit RWData(const T &val, const bool isValid = false) {
+        explicit RWData(const T &val, const bool isValid = false, const bool isIgnored = false) {
             value = val;
             valid = isValid;
+            ignored = isIgnored;
         }
 
         [[nodiscard]] bool isValid() const { return valid; }
+        [[nodiscard]] bool isIgnored() const { return ignored; }
         [[nodiscard]] T getValue() const { return value; }
 
-        void setValue(const T &val, const bool isValid) {
+        void setValue(const T &val, const bool isValid, const bool isIgnored) {
             value = val;
             valid = isValid;
+            ignored = isIgnored;
         }
 
         friend QDataStream &operator<<(QDataStream &ds, const RWData &data) {
-            ds << data.valid << data.value;
+            ds << data.valid << data.ignored << data.value;
 
             return ds;
         }
 
         friend QDataStream &operator>>(QDataStream &ds, RWData &data) {
-            ds >> data.valid >> data.value;
+            ds >> data.valid >> data.ignored >> data.value;
 
             return ds;
         }
