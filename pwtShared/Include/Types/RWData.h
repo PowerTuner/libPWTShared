@@ -42,7 +42,7 @@ namespace PWTS {
         [[nodiscard]] bool isIgnored() const { return ignored; }
         [[nodiscard]] T getValue() const { return value; }
 
-        void setValue(const T &val, const bool isValid, const bool isIgnored) {
+        void setValue(const T &val, const bool isValid, const bool isIgnored = false) {
             value = val;
             valid = isValid;
             ignored = isIgnored;
