@@ -35,8 +35,9 @@
 
 namespace PWTS {
     struct PWTSHARED_EXPORT [[nodiscard]] DaemonPacket final {
-        static constexpr int version = 1;
+        static constexpr int version = 2;
         PacketError error = PacketError::NoError;
+        bool hasProfileData = false;
         OSType os;
         CPUVendor vendor;
         QSet<DError> errors;
@@ -52,6 +53,7 @@ namespace PWTS {
 
         friend QDataStream &operator<<(QDataStream &ds, const DaemonPacket &data) {
             ds << version <<
+                data.hasProfileData <<
                 data.os <<
                 data.vendor <<
                 data.errors <<
@@ -103,7 +105,8 @@ namespace PWTS {
                 return ds;
             }
 
-            ds >> data.os >>
+            ds >> data.hasProfileData >>
+                data.os >>
                 data.vendor >>
                 data.errors >>
                 data.dynSysInfo >>
