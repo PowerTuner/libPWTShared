@@ -364,42 +364,70 @@ namespace PWTS {
                 return "MSR: Intel temperature target";
 
             // ryzenadj
-            case Feature::AMD_RY_STAPM_LIMIT:
-                return "RADJ: stapm limit";
-            case Feature::AMD_RY_FAST_LIMIT:
-                return "RADJ: fast limit";
-            case Feature::AMD_RY_SLOW_LIMIT:
-                return "RADJ: slow limit";
-            case Feature::AMD_RY_TCTL_TEMP:
-                return "RADJ: tctl temperature";
+            case Feature::AMD_RY_STAPM_LIMIT_W:
+                return "RADJ: stapm limit [write]";
+            case Feature::AMD_RY_STAPM_LIMIT_R:
+                return "RADJ: stapm limit [read]";
+            case Feature::AMD_RY_FAST_LIMIT_W:
+                return "RADJ: fast limit [write]";
+            case Feature::AMD_RY_FAST_LIMIT_R:
+                return "RADJ: fast limit [read]";
+            case Feature::AMD_RY_SLOW_LIMIT_W:
+                return "RADJ: slow limit [write]";
+            case Feature::AMD_RY_SLOW_LIMIT_R:
+                return "RADJ: slow limit [read]";
+            case Feature::AMD_RY_TCTL_TEMP_W:
+                return "RADJ: tctl temperature [write]";
+            case Feature::AMD_RY_TCTL_TEMP_R:
+                return "RADJ: tctl temperature [read]";
             case Feature::AMD_RY_TCTL_TEMP_VAL:
-                return "RADJ: tctl temperature value";
-            case Feature::AMD_RY_APU_SLOW:
-                return "RADJ: APU slow limit";
-            case Feature::AMD_RY_APU_SKIN_TEMP:
-                return "RADJ: APU skin temperature";
-            case Feature::AMD_RY_DGPU_SKIN_TEMP:
-                return "RADJ: DGPU skin temperature";
-            case Feature::AMD_RY_VRM_CURRENT:
-                return "RADJ: vrm current";
-            case Feature::AMD_RY_VRM_SOC_CURRENT:
-                return "RADJ: vrm soc current";
-            case Feature::AMD_RY_VRM_MAX_CURRENT:
-                return "RADJ: vrm max current";
-            case Feature::AMD_RY_VRM_SOC_MAX_CURRENT:
-                return "RADJ: vrm soc max current";
-            case Feature::AMD_RY_STATIC_GFX_CLK:
-                return "RADJ: static GPU clock";
-    	    case Feature::AMD_RY_MIN_GFX_CLOCK:
-                return "RADJ: min GPU clock";
-    	    case Feature::AMD_RY_MAX_GFX_CLOCK:
-                return "RADJ: max GPU clock";
-            case Feature::AMD_RY_POWER_PROFILE:
-                return "RADJ: power profile";
-    	    case Feature::AMD_RY_CO_ALL:
-                return "RADJ: curve optimizer all";
-    	    case Feature::AMD_RY_CO_PER:
-                return "RADJ: per core curve optimizer";
+                return "RADJ: tctl temperature [stat]";
+            case Feature::AMD_RY_APU_SLOW_W:
+                return "RADJ: APU slow limit [write]";
+            case Feature::AMD_RY_APU_SLOW_R:
+                return "RADJ: APU slow limit [read]";
+            case Feature::AMD_RY_APU_SKIN_TEMP_W:
+                return "RADJ: APU skin temperature [write]";
+            case Feature::AMD_RY_APU_SKIN_TEMP_R:
+                return "RADJ: APU skin temperature [read]";
+            case Feature::AMD_RY_DGPU_SKIN_TEMP_W:
+                return "RADJ: DGPU skin temperature [write]";
+            case Feature::AMD_RY_DGPU_SKIN_TEMP_R:
+                return "RADJ: DGPU skin temperature [read]";
+            case Feature::AMD_RY_VRM_CURRENT_W:
+                return "RADJ: vrm current [write]";
+            case Feature::AMD_RY_VRM_CURRENT_R:
+                return "RADJ: vrm current [read]";
+            case Feature::AMD_RY_VRM_SOC_CURRENT_W:
+                return "RADJ: vrm soc current [write]";
+            case Feature::AMD_RY_VRM_SOC_CURRENT_R:
+                return "RADJ: vrm soc current [read]";
+            case Feature::AMD_RY_VRM_MAX_CURRENT_W:
+                return "RADJ: vrm max current [write]";
+            case Feature::AMD_RY_VRM_MAX_CURRENT_R:
+                return "RADJ: vrm max current [read]";
+            case Feature::AMD_RY_VRM_SOC_MAX_CURRENT_W:
+                return "RADJ: vrm soc max current [write]";
+            case Feature::AMD_RY_VRM_SOC_MAX_CURRENT_R:
+                return "RADJ: vrm soc max current [read]";
+            case Feature::AMD_RY_STATIC_GFX_CLK_W:
+                return "RADJ: static GPU clock [write]";
+            case Feature::AMD_RY_STATIC_GFX_CLK_R:
+                return "RADJ: static GPU clock [read]";
+    	    case Feature::AMD_RY_MIN_GFX_CLOCK_W:
+                return "RADJ: min GPU clock [write]";
+            case Feature::AMD_RY_MIN_GFX_CLOCK_R:
+                return "RADJ: min GPU clock [read]";
+    	    case Feature::AMD_RY_MAX_GFX_CLOCK_W:
+                return "RADJ: max GPU clock [write]";
+            case Feature::AMD_RY_MAX_GFX_CLOCK_R:
+                return "RADJ: max GPU clock [read]";
+            case Feature::AMD_RY_POWER_PROFILE_W:
+                return "RADJ: power profile [write]";
+    	    case Feature::AMD_RY_CO_ALL_W:
+                return "RADJ: curve optimizer all [write]";
+    	    case Feature::AMD_RY_CO_PER_W:
+                return "RADJ: per core curve optimizer [write]";
 
             // amd
             case Feature::AMD_HWPSTATE:
