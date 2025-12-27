@@ -41,6 +41,7 @@ namespace PWTS {
         [[nodiscard]] bool isValid() const { return valid; }
         [[nodiscard]] bool isIgnored() const { return ignored; }
         [[nodiscard]] T getValue() const { return value; }
+        void setIgnored(const bool isIgnored) { ignored = isIgnored; }
 
         void setValue(const T &val, const bool isValid, const bool isIgnored = false) {
             value = val;
