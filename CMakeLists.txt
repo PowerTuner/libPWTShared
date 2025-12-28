@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.23)
 
-project(PWTShared VERSION 1.0 DESCRIPTION "Shared library for PowerTuner clients and daemon" LANGUAGES CXX)
+project(PWTShared VERSION 1.1 DESCRIPTION "Shared library for PowerTuner clients and daemon" LANGUAGES CXX)
 
 set(PROJECT_AUTHOR "kylon")
 set(CMAKE_CXX_STANDARD 20)
