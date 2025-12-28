@@ -412,8 +412,6 @@ namespace PWTS {
                 return "RADJ: vrm soc max current [read]";
             case Feature::AMD_RY_STATIC_GFX_CLK_W:
                 return "RADJ: static GPU clock [write]";
-            case Feature::AMD_RY_STATIC_GFX_CLK_R:
-                return "RADJ: static GPU clock [read]";
     	    case Feature::AMD_RY_MIN_GFX_CLOCK_W:
                 return "RADJ: min GPU clock [write]";
             case Feature::AMD_RY_MIN_GFX_CLOCK_R:
