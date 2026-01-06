@@ -32,8 +32,7 @@ namespace PWTS {
     public:
         RWData() = default;
 
-        explicit RWData(const T &val, const bool isValid = false, const bool isIgnored = false) {
-            value = val;
+        explicit RWData(const T &val, const bool isValid = false, const bool isIgnored = false): value(val) {
             valid = isValid;
             ignored = isIgnored;
         }
