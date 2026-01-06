@@ -31,8 +31,7 @@ namespace PWTS {
     public:
         ROData() = default;
 
-        explicit ROData(const T &val, const bool isValid = false) {
-            value = val;
+        explicit ROData(const T &val, const bool isValid = false): value(val) {
             valid = isValid;
         }
 
